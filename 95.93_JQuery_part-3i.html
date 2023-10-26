@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>95.93_JQuery_part-3i</title>
+    <style>
+      .parent {
+        font-size: 3em;
+        border: 1px solid red;
+        padding: 10px;
+      }
+      .child {
+        border: 5px solid green;
+        padding: 10px;
+      }
+      .grandchild {
+        border: 4px dashed blue;
+        padding: 10px;
+      }
+    </style>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+      integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <div class="parent">
+      Parent
+      <div class="child">
+        Child 1
+        <div class="grandchild">grandchild_1</div>
+        <div class="grandchild">grandchild_2</div>
+        <div class="grandchild">grandchild_3</div>
+      </div>
+      <div class="child">
+        Child 2
+        <div class="grandchild">grandchild2_1</div>
+        <div class="grandchild">grandchild2_2</div>
+        <div class="grandchild">grandchild2_3</div>
+      </div>
+    </div>
+    <script>
+      //Check if the page is loaded successfully
+      //1.(Two eyes)(one noise);
+      (function () {
+        //$(selector).action();
+        let y = $("div.grandchild").parents();
+        //css("propertyname","value");
+        y.css("border", "4px solid purple");
+      })(jQuery);
+    </script>
+  </body>
+</html>
